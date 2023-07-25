@@ -28,8 +28,6 @@ app.enable('trust proxy');
 
 app.post('/api/fetchStockData', async (req, res) => {
     const { stockSymbol, date } = req.body;
-    console.log("this is request.body= ", req.body);
-    const apiKey = 'eFQpPDw_jG3oWsjcDavOI2JcjKNFVdpn';
 
     try {
         // Make the API request to fetch trade statistics for the specified stock and date
@@ -51,7 +49,6 @@ app.post('/api/fetchStockData', async (req, res) => {
 
         // Send the stock data in JSON format
         res.json(stockData);
-        console.log("this is stock data = ", stockData)
     } catch (error) {
         // Handle various edge cases and relevant response codes
         if (error.response) {
