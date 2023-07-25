@@ -60,7 +60,7 @@ const StockForm = () => {
 
             // Set the received stock data to the state
             setStockDetails(response.data);
-            console.log("this is responce data=", stockDetails)
+            
         } catch (error) {
             console.error('Error fetching stock data:', error);
             alert('Error fetching stock data. Please try again later.');
@@ -101,15 +101,6 @@ const StockForm = () => {
                     <p>Volume: {stockDetails.Volume}</p>
                 </div>
             )}
-            {/* Stock Details
-            <div className='stock-details'>
-                <h2>Stock Details</h2>
-                <p>Open: 100</p>
-                <p>High: 120</p>
-                <p>Low: 90</p>
-                <p>Close: 110</p>
-                <p>Volume: 50000</p>
-            </div> */}
         </form>
     );
 };
